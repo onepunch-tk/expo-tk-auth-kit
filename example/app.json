@@ -26,7 +26,13 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [["../app.plugin.js",{
-      "name": "tkstar"
+      "required":{
+        "kakaoMavenRepoUrl": "https://devrepo.kakao.com/nexus/content/groups/public/"
+      },
+      "kakaoAuth": {
+        "nativeAppKey": "b4b2c2bc15ab0f9b933a31c17c8d20d3",
+        "android": true
+      }
     }]]
   }
 }
