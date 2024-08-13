@@ -2,7 +2,11 @@
   "extends": "expo-module-scripts/tsconfig.plugin",
   "compilerOptions": {
     "outDir": "build",
-    "rootDir": "src"
+    "rootDir": "src",
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "declarationMap": false
   },
   "include": [
     "./src"
