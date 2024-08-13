@@ -14,4 +14,14 @@ export function validateProps(
       "kakaoMavenRepoUrl is required and must be a string",
     );
   }
+
+  if (
+    props.kakaoAuth &&
+    !props.kakaoAuth.nativeAppKey &&
+    typeof props.kakaoAuth.nativeAppKey !== "string"
+  ) {
+    throw new ConfigValidationError(
+      "Kakao OAuth authentication, you must provide a valid API Key as a string.",
+    );
+  }
 }
