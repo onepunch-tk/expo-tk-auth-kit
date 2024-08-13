@@ -25,8 +25,15 @@ if (useManagedAndroidSdkVersions) {
   project.android {
     compileSdkVersion safeExtGet("compileSdkVersion", 34)
     defaultConfig {
-      minSdkVersion safeExtGet("minSdkVersion", 21)
+      minSdkVersion safeExtGet("minSdkVersion", 23)
       targetSdkVersion safeExtGet("targetSdkVersion", 34)
+    }
+    dependencies {
+      repositories {
+        implementation "com.kakao.sdk:v2-common:2.20.3"
+        implementation "com.kakao.sdk:v2-auth:2.20.3"
+        implementation "com.kakao.sdk:v2-user:2.20.3"
+      }
     }
   }
 }
